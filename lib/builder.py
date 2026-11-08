@@ -205,7 +205,7 @@ class Build:
         step("Building boot.img")
         rd = bootimg.build_ramdisk(self.images["ramdisk"], os.path.join(PREBUILT, "ramdisk", "init"))
         k = os.path.join(PREBUILT, "kernel")
-        bootimg.build_boot(os.path.join(k, "Image.gz"), rd, os.path.join(k, "xiaomi-sdmmagpie.dtb"), CMDLINE,
+        bootimg.build_boot(os.path.join(k, "Image.gz"), rd, os.path.join(k, "a70q.dtb"), CMDLINE,
                            os.path.join(self.out, "boot.img"))
         shutil.copyfile(os.path.join(k, "dtbo.img"), os.path.join(self.out, "dtbo.img"))
 
